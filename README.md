@@ -1,5 +1,7 @@
 # Maqtal al-Imam al-Hussain (AS) - Cinematic Web App
 
+**🟢 Live Website: [Visit the Maqtal Web App](https://redbridegroom-hue.github.io/maqtal-app/)**
+
 An ultra-premium, cinematic, and fully progressive web application dedicated to the martyrdom narrative of Imam Hussain ibn Ali (peace be upon him) at Karbala. 
 
 This project aims to provide a deeply immersive, reverent, and focused reading and listening experience, synchronizing the classical Arabic narrative with English translations over a high-quality local audio recitation.
