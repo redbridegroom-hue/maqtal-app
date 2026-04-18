@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maqtal al-Imam al-Hussain (AS) — The Martyrdom of Imam Hussain</title>
+  <meta name="description" content="The narrative of the martyrdom of Imam Hussain ibn Ali (peace be upon him) at Karbala on the Day of Ashura – Arabic text with English translation and audio recitation by Sheikh Abdul Zahra Al-Ka'bi.">
+  <meta name="theme-color" content="#8a0303">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="icon.svg">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
+</head>
+<body>
+
+  <!-- Reading Progress -->
+  <div id="reading-progress"></div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="main-nav">
+    <div class="nav-inner">
+      <div class="nav-brand">
+        <div class="nav-brand-icon">☪</div>
+        <div class="nav-brand-text">Maqtal al-Hussain</div>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#hero" class="active">Home</a></li>
+        <li><a href="#toc">Chapters</a></li>
+        <li><a href="#section-1">Begin</a></li>
+        <li><a href="#section-10">Battle</a></li>
+        <li><a href="#section-18">Shahada</a></li>
+        <li><button class="nav-settings-btn" id="settings-btn" aria-label="Settings">⚙️</button></li>
+      </ul>
+      <button class="nav-mobile-btn" id="mobile-menu-btn" aria-label="Open menu">☰</button>
+    </div>
+  </nav>
+
+  <!-- Theme Studio Panel -->
+  <div class="settings-panel" id="settings-panel">
+    <div class="theme-studio-header">
+      <h3>Theme Studio</h3>
+      <button id="close-settings" class="close-settings-btn">✕</button>
+    </div>
+    
+    <div class="setting-group">
+      <div class="setting-label">Aesthetic Preset</div>
+      <div class="theme-presets">
+        <button class="preset-btn active" data-theme="dark" aria-label="Cinematic Dark Theme">
+          <span class="preset-icon">🌙</span> Dark
+        </button>
+        <button class="preset-btn" data-theme="midnight" aria-label="Deep Midnight Theme">
+          <span class="preset-icon">🌌</span> Midnight
+        </button>
+        <button class="preset-btn" data-theme="minimal" aria-label="Soft Minimalist Theme">
+          <span class="preset-icon">☀️</span> Light
+        </button>
+        <button class="preset-btn" data-theme="slate" aria-label="Modern Slate Theme">
+          <span class="preset-icon">🏢</span> Slate
+        </button>
+        <button class="preset-btn" data-theme="parchment" aria-label="Classical Manuscript Theme">
+          <span class="preset-icon">📜</span> Script
+        </button>
+        <button class="preset-btn" data-theme="sepia" aria-label="Warm Sepia Theme">
+          <span class="preset-icon">🏜️</span> Sepia
+        </button>
+      </div>
+    </div>
+
+    <div class="setting-group">
+      <div class="setting-label">Accent Color</div>
+      <div class="color-orbs">
+        <button class="color-orb active" data-color="gold" style="--orb-color: #D4AF37;"></button>
+        <button class="color-orb" data-color="crimson" style="--orb-color: #e63946;"></button>
+        <button class="color-orb" data-color="emerald" style="--orb-color: #2a9d8f;"></button>
+        <button class="color-orb" data-color="sapphire" style="--orb-color: #457b9d;"></button>
+        <button class="color-orb" data-color="amethyst" style="--orb-color: #9d4edd;"></button>
+        <button class="color-orb" data-color="rosegold" style="--orb-color: #b56576;"></button>
+        <button class="color-orb" data-color="ruby" style="--orb-color: #9a031e;"></button>
+      </div>
+    </div>
+
+    <div class="setting-group">
+      <div class="setting-label">Typography Scale</div>
+      <div class="font-slider-container">
+        <span class="font-icon">ع</span>
+        <input type="range" id="font-scale-ar" class="theme-slider" min="0.8" max="1.5" step="0.05" value="1">
+      </div>
+      <div class="font-slider-container" style="margin-top: 0.5rem;">
+        <span class="font-icon" style="font-family: var(--font-english); font-size: 0.8rem;">En</span>
+        <input type="range" id="font-scale-en" class="theme-slider" min="0.8" max="1.3" step="0.05" value="1">
+      </div>
+    </div>
+
+    <div class="setting-group" style="padding-bottom: 1rem;">
+      <div class="setting-item" style="margin:0;">
+        <span>English Transliteration</span>
+        <label class="switch">
+          <input type="checkbox" id="translit-toggle">
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </div>
+    
+    <div class="theme-reset-container">
+      <button id="theme-reset-btn" class="theme-reset-btn">↺ Reset to Default Settings</button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="nav-mobile-menu" id="mobile-menu">
+    <button class="nav-mobile-close" id="mobile-menu-close" aria-label="Close menu">✕</button>
+    <a href="#hero" onclick="closeMobileMenu()">Home</a>
+    <a href="#toc" onclick="closeMobileMenu()">Chapters</a>
+    <a href="#section-1" onclick="closeMobileMenu()">Morning of Ashura</a>
+    <a href="#section-4" onclick="closeMobileMenu()">First Speech</a>
+    <a href="#section-7" onclick="closeMobileMenu()">Hayhat minna al-Dhilla</a>
+    <a href="#section-8" onclick="closeMobileMenu()">Al-Hurr's Repentance</a>
+    <a href="#section-10" onclick="closeMobileMenu()">The Battle</a>
+    <a href="#section-13" onclick="closeMobileMenu()">Ali al-Akbar</a>
+    <a href="#section-17" onclick="closeMobileMenu()">Al-Abbas</a>
+    <a href="#section-18" onclick="closeMobileMenu()">The Martyrdom</a>
+    <a href="#section-19" onclick="closeMobileMenu()">Zainab's Lament</a>
+  </div>
+
+  <!-- Section Navigation Dots -->
+  <div class="section-nav" id="section-nav">
+    <div class="section-nav-track"></div>
+    <button class="section-nav-dot" data-target="hero" data-label="Home"></button>
+    <button class="section-nav-dot" data-target="section-1" data-label="Morning of Ashura"></button>
+    <button class="section-nav-dot" data-target="section-3" data-label="Hussain's Du'a"></button>
+    <button class="section-nav-dot" data-target="section-4" data-label="First Speech"></button>
+    <button class="section-nav-dot" data-target="section-7" data-label="Hayhat minna al-Dhilla"></button>
+    <button class="section-nav-dot" data-target="section-8" data-label="Al-Hurr"></button>
+    <button class="section-nav-dot" data-target="section-10" data-label="First Charge"></button>
+    <button class="section-nav-dot" data-target="section-13" data-label="Ali al-Akbar"></button>
+    <button class="section-nav-dot" data-target="section-15" data-label="Qasim"></button>
+    <button class="section-nav-dot" data-target="section-17" data-label="Al-Abbas"></button>
+    <button class="section-nav-dot" data-target="section-18" data-label="Shahada"></button>
+    <button class="section-nav-dot" data-target="section-19" data-label="Zainab's Lament"></button>
+  </div>
+
+  <!-- ======= HERO ======= -->
+  <header class="hero" id="hero">
+    <div class="hero-ornament">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50 5 L61 38 L95 38 L68 58 L78 91 L50 72 L22 91 L32 58 L5 38 L39 38 Z" fill="currentColor" opacity="0.4"/>
+        <circle cx="50" cy="50" r="15" fill="none" stroke="currentColor" stroke-width="1" opacity="0.6"/>
+        <circle cx="50" cy="50" r="25" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.3"/>
+      </svg>
+    </div>
+    <div class="hero-bismillah">بِسْمِ اللهِ الرَّحْمنِ الرَّحِیمِ</div>
+    <div class="hero-salawat">اللّهُمَّ صَلِّ عَلى مُحَمَّدٍ وَآلِ مُحَمَّدٍ</div>
+    <h1 class="hero-title-ar">مقتل الإمام الحسين عليه السلام</h1>
+    <p class="hero-title-en">The Martyrdom of Imam Hussain (Peace Be Upon Him)</p>
+    <div class="hero-divider"></div>
+    <p class="hero-reciter">Recited by</p>
+    <p class="hero-reciter-name">Sheikh Abdul Zahra Al-Ka'bi</p>
+    <div class="hero-scroll-hint">
+      Scroll to begin
+      <span></span>
+    </div>
+  </header>
+
+  <!-- ======= TABLE OF CONTENTS ======= -->
+  <section class="toc-section fade-in" id="toc">
+    <div class="toc-header">
+      <h2>Chapters</h2>
+      <div class="ornament-divider"><span class="line"></span><span class="diamond"></span><span class="line"></span></div>
+    </div>
+    <div class="toc-grid">
+      <a class="toc-item" href="#section-1"><span class="toc-item-num">I</span><span class="toc-item-text"><span class="toc-item-ar">صباح يوم عاشوراء</span><span class="toc-item-en">Morning of Ashura</span></span></a>
+      <a class="toc-item" href="#section-2"><span class="toc-item-num">II</span><span class="toc-item-text"><span class="toc-item-ar">تنظيم الجيشين</span><span class="toc-item-en">Formation of the Armies</span></span></a>
+      <a class="toc-item" href="#section-3"><span class="toc-item-num">III</span><span class="toc-item-text"><span class="toc-item-ar">دعاء الحسين عليه السلام</span><span class="toc-item-en">Hussain's Supplication</span></span></a>
+      <a class="toc-item" href="#section-4"><span class="toc-item-num">IV</span><span class="toc-item-text"><span class="toc-item-ar">خطبة الحسين الأولى</span><span class="toc-item-en">The First Address</span></span></a>
+      <a class="toc-item" href="#section-5"><span class="toc-item-num">V</span><span class="toc-item-text"><span class="toc-item-ar">خطبة زهير بن القين</span><span class="toc-item-en">Address of Zuhair</span></span></a>
+      <a class="toc-item" href="#section-6"><span class="toc-item-num">VI</span><span class="toc-item-text"><span class="toc-item-ar">خطبة بُرَيرِ بن خُضَير</span><span class="toc-item-en">Address of Burayr</span></span></a>
+      <a class="toc-item" href="#section-7"><span class="toc-item-num">VII</span><span class="toc-item-text"><span class="toc-item-ar">خطبة الحسين الثانية</span><span class="toc-item-en">The Second Address — Hayhat minna al-Dhilla</span></span></a>
+      <a class="toc-item" href="#section-8"><span class="toc-item-num">VIII</span><span class="toc-item-text"><span class="toc-item-ar">موقف الحر الرياحي</span><span class="toc-item-en">The Repentance of Al-Hurr</span></span></a>
+      <a class="toc-item" href="#section-9"><span class="toc-item-num">IX</span><span class="toc-item-text"><span class="toc-item-ar">بداية الحرب</span><span class="toc-item-en">Beginning of Battle</span></span></a>
+      <a class="toc-item" href="#section-10"><span class="toc-item-num">X</span><span class="toc-item-text"><span class="toc-item-ar">الحملة الأولى</span><span class="toc-item-en">The First Charge</span></span></a>
+      <a class="toc-item" href="#section-11"><span class="toc-item-num">XI</span><span class="toc-item-text"><span class="toc-item-ar">صلاة الظهيرة</span><span class="toc-item-en">The Noon Prayer</span></span></a>
+      <a class="toc-item" href="#section-12"><span class="toc-item-num">XII</span><span class="toc-item-text"><span class="toc-item-ar">الحملة الثانية</span><span class="toc-item-en">The Second Charge</span></span></a>
+      <a class="toc-item" href="#section-13"><span class="toc-item-num">XIII</span><span class="toc-item-text"><span class="toc-item-ar">مصرع علي الأكبر</span><span class="toc-item-en">Martyrdom of Ali al-Akbar</span></span></a>
+      <a class="toc-item" href="#section-14"><span class="toc-item-num">XIV</span><span class="toc-item-text"><span class="toc-item-ar">مقاتل آل عقيل</span><span class="toc-item-en">The Sons of Aqeel</span></span></a>
+      <a class="toc-item" href="#section-15"><span class="toc-item-num">XV</span><span class="toc-item-text"><span class="toc-item-ar">القاسم بن الحسن</span><span class="toc-item-en">Qasim ibn al-Hasan</span></span></a>
+      <a class="toc-item" href="#section-16"><span class="toc-item-num">XVI</span><span class="toc-item-text"><span class="toc-item-ar">إخوة العباس</span><span class="toc-item-en">Brothers of Al-Abbas</span></span></a>
+      <a class="toc-item" href="#section-17"><span class="toc-item-num">XVII</span><span class="toc-item-text"><span class="toc-item-ar">شهادة العباس عليه السلام</span><span class="toc-item-en">Martyrdom of Al-Abbas</span></span></a>
+      <a class="toc-item" href="#section-18"><span class="toc-item-num">XVIII</span><span class="toc-item-text"><span class="toc-item-ar">مصرع الإمام الحسين</span><span class="toc-item-en">Martyrdom of Imam Hussain</span></span></a>
+      <a class="toc-item" href="#section-19"><span class="toc-item-num">XIX</span><span class="toc-item-text"><span class="toc-item-ar">ندبة زينب عليها السلام</span><span class="toc-item-en">The Lament of Zainab</span></span></a>
+    </div>
+  </section>
+
+  <!-- ======= NARRATIVE SECTIONS ======= -->
+  <main class="content-wrapper">
+
+    <!-- === SECTION 1: Morning of Ashura === -->
+    <section class="narrative-section" id="section-1">
+      <div class="section-header">
+        <div class="section-number">Chapter I</div>
+        <h2 class="section-title-ar">صباح يوم عاشوراء</h2>
+        <p class="section-title-en">The Morning of Ashura</p>
+      </div>
+
+      <div class="text-block">
+        <button class="share-btn" aria-label="Share Quote"> Share</button>
+        <div class="arabic-text">
+          ما أصبح الحسين عليه السلام يوم عاشوراء وصلّى بأصحابه صلاة الصبح، قام خطيباً فيهم، فحمد الله وأثنى عليه، ثم قال: « إن الله تعالى قد أذن في قتلكم وقتلي في هذا اليوم، فعليكم بالصّبر والقتال »
+        </div>
+        <div class="english-text translation">
+          When morning came upon Hussain (peace be upon him) on the Day of Ashura, he led his companions in the Dawn Prayer. Then he stood to address them, praised Allah and glorified Him, and said: <strong>"Indeed, Allah the Most High has permitted your slaying and mine on this day. So hold fast to patience and to the struggle."</strong>
+        </div>
+        <div class="transliteration-line" style="display: none;">
+          Lammā aṣbaḥa al-Ḥusayn (alayhi as-salām) yawma 'Āshūrā' wa-ṣallā bi-aṣḥābihi ṣalāta aṣ-ṣubḥ, qāma khaṭīban fīhim, fa-ḥamida Allāh wa-athnā 'alayh, thumma qāl: "Inna Allāh ta'ālā qad adhin fī qatlikum wa-qatlī fī hādhā al-yawm, fa-'alaykum bi-ṣṣabri wa-l-qitāl."
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text">
+          ثم صفّهم للحرب وكانوا على رواية إثنين وثلاثين فارساً وأربعين راجلاً. فجعل زهير بن القين في الميمنة وحبيب بن مظاهر في الميسرة، وثبت هو عليه السلام في القلب، وأعطى رايته العظمى أخاه العباس عليه السلام
+        </div>
+        <div class="english-text translation">
+          He then arranged them for battle — and they were, according to one narration, thirty-two horsemen and forty foot soldiers. He placed <strong><span data-tooltip="A noble of Kufa who switched from the Umayyad army to defend Hussain.">Zuhair ibn al-Qayn</span></strong> on the right flank, <strong><span data-tooltip="A loyal companion of the Prophet and Imam Ali.">Habib ibn Mudhahir</span></strong> on the left, and he himself (peace be upon him) held the center. He gave his great banner to his brother <strong>Al-Abbas</strong> (peace be upon him).
+        </div>
+      </div>
+    </section>
+
+    <div class="ornament-divider fade-in"><span class="line"></span><span class="diamond"></span><span class="line"></span></div>
+
+    <!-- === SECTION 2: Formation of Armies === -->
+    <section class="narrative-section" id="section-2">
+      <div class="section-header">
+        <div class="section-number">Chapter II</div>
+        <h2 class="section-title-ar">تنظيم الجيشين</h2>
+        <p class="section-title-en">Formation of the Armies</p>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text">
+          وجعلوا البيوت في ظهورهم، وأمر الحسين عليه السلام بحطبٍ وقصبٍ أن يجعل في خندق كانوا حفروه، وأن تضرم به النار فلا يأتيهم العدو من ورائهم.
+        </div>
+        <div class="english-text translation">
+          They placed the tents behind them. Hussain (peace be upon him) ordered that firewood and reeds be placed in a trench they had dug, and that it be set alight, so the enemy could not attack them from behind.
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text">
+          وعبّأ عمر بن سعد أصحابه، وكانوا على بعض الروايات ثلاثين ألفاً، فجعل عمرَو بن الحجّاج في الميمنة، وشمر بن ذي الجّوشن في الميسرة، وعلى الخيل عُزرةَ بن قيس، وعلى الرجّالة شَبَث بن رِبعي، وأعطى رايته ذُويداً مولاه.
+        </div>
+        <div class="english-text translation">
+          Umar ibn Sa'd arranged his forces — numbering, according to some narrations, <strong>thirty thousand</strong>. He placed Amr ibn al-Hajjaj on the right, Shimr ibn Dhil-Jawshan on the left, Uzra ibn Qays over the cavalry, and Shabath ibn Rib'i over the infantry. He gave his standard to his servant Duwayd.
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text">
+          وأقبل القوم يجولون حول معسكر الحسين عليه السلام وينظرون إلى النّار تضطرم في الخندق، فنادى الشِّمر بن ذي الجّوشن بأعلى صوته: يا حسين، تعجلتَ بالنار في الدنيا قبل يوم القيامة.
+        </div>
+        <div class="english-text translation">
+          The enemy forces circled around Hussain's camp, gazing at the fire blazing in the trench. Then <strong>Shimr ibn Dhil-Jawshan</strong> shouted at the top of his voice: "O Hussain! You have hastened the Fire in this world before the Day of Judgment!"
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="speaker-label hussain">Imam Hussain (AS)</div>
+        <div class="arabic-text speech">
+          فرفع الحسين عليه السلام رأسه قائلاً: « من هذا؟ كأنّه الشِّمر بن ذي الّجوشن؟ » فقالوا: نعم. فقال عليه السلام: « أنتَ أولى بها صليّاً »
+        </div>
+        <div class="english-text translation">
+          Hussain (peace be upon him) raised his head and said: <strong>"Who is this? It seems to be Shimr ibn Dhil-Jawshan."</strong> They said: "Yes." He (peace be upon him) said: <strong>"You are more deserving of burning in it."</strong>
+        </div>
+      </div>
+    </section>
+
+    <div class="ornament-divider fade-in"><span class="line"></span><span class="diamond"></span><span class="line"></span></div>
+
+    <!-- === SECTION 3: Hussain's Du'a === -->
+    <section class="narrative-section" id="section-3">
+      <div class="section-header">
+        <div class="section-number">Chapter III</div>
+        <h2 class="section-title-ar">دعاء الحسين عليه السلام</h2>
+        <p class="section-title-en">The Supplication of Hussain</p>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text">
+          ولمّا نظر الحسين عليه السلام إلى جمعهم كأنّهم السيل المنحدر، رفع يديه بالدعاء
+        </div>
+        <div class="english-text translation">
+          When Hussain (peace be upon him) looked upon their multitude — like a torrential flood rushing down — he raised his hands in supplication:
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="speaker-label hussain">Imam Hussain (AS) — Supplication</div>
+        <div class="arabic-text dua">
+          « اللهم أنت ثقتي في كلّ كرب، ورجائي في كلّ شدّة، وأنت لي في كلّ أمر نزل بي ثقة وعُدّة، كم من همّ يضعف فيه الفؤاد، وتقلّ فيه الحيلة، ويخذل فيه الصديق، ويشمت فيه العدو، أنزلته بك، وشكوته إليك، رغبة مني إليك عمّن سواك، ففرّجته وكشفته، فأنت ولّي كلّ نعمة، وصاحب كلّ حسنة، ومنتهى كلّ رغبة »
+        </div>
+        <div class="english-text translation">
+          <strong>"O Allah, You are my trust in every distress, and my hope in every hardship. You are for me, in every affair that befalls me, a trust and a provision. How many a grief weakens the heart, and diminishes all recourse, and in which the friend abandons, and the enemy gloats — I have brought it to You, and complained of it to You, turning to You alone and away from all others. And You relieved it and removed it. So You are the Guardian of every blessing, the Master of every good, and the ultimate object of every desire."</strong>
+        </div>
+      </div>
+    </section>
+
+    <div class="ornament-divider fade-in"><span class="line"></span><span class="diamond"></span><span class="line"></span></div>
+
+    <!-- === SECTION 4: First Speech === -->
+    <section class="narrative-section" id="section-4">
+      <div class="section-header">
+        <div class="section-number">Chapter IV</div>
+        <h2 class="section-title-ar">خطبة الحسين عليه السلام الأولى</h2>
+        <p class="section-title-en">The First Address of Hussain</p>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text">
+          ثّم دعا الحسين عليه السلام براحلته فركبها، وتقدّم نحو القوم ونادى بأعلى صوت يُسمع جلَّهم
+        </div>
+        <div class="english-text translation">
+          Then Hussain (peace be upon him) called for his mount, rode it, advanced towards the enemy forces, and called out at the top of his voice so that most of them could hear:
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="speaker-label hussain">Imam Hussain (AS)</div>
+        <div class="arabic-text speech">
+          « أيّها الناس، إسمعوا قولي، ولا تعجلوا حتى أعظكم بما يحقّ لكم عليّ، وحتّى أُعذر إليكم، فإن أعطيتموني النّصف كنتم بذلك أسعد، وإن لم تعطوني النصف من أنفسكم فأجمعوا رأيكم ثمّ لا يكن أمركم عليكم غُمّة ثم اقضوا إلّي ولا تُنظرون، إنّ ولييّ الله الذي نزّل الكتاب وهو يتولى الصالحين »
+        </div>
+        <div class="english-text translation">
+          <strong>"O people! Hear my words, and do not hasten until I admonish you with what is your right upon me, and until I present my plea to you. If you grant me justice, then you will be the happier for it. And if you do not grant me justice from yourselves, then gather your resolve, and let not your affair be a cause of anguish to you, then pass your verdict upon me and give me no respite. Indeed, my Guardian is Allah, Who sent down the Book, and He looks after the righteous."</strong>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="speaker-label hussain">Imam Hussain (AS)</div>
+        <div class="arabic-text speech">
+          « أيها الناس: فانسبوني فانظروا من أنا؟ ثّم ارجعوا إلى أنفسكم وعاتبوها، فانظروا هل يصلحُ لكم قتلي وانتهاك حرمتي؟! ألستُ ابن بنت نبيِّكم، وابن وصيّه وابن عمّه وأوّل المؤمنين المصدّق لرسول الله بما جاء به من عند ربّه؟ أوليس حمزة سيّد الشهداء عمّي؟ أوليس جعفر الطيّار في الجنة بجناحين عمّي؟ أولم يبلغكم ما قال رسول الله لي ولأخي: هذان سيدا شباب أهل الجنّة؟ »
+        </div>
+        <div class="english-text translation">
+          <strong>"O people! Trace my lineage and see who I am! Then turn back to yourselves and reproach them. Consider whether it is right for you to kill me and violate my sanctity! Am I not the son of the daughter of your Prophet, and the son of his executor, his cousin, and the first of the believers who affirmed the Messenger of Allah in what he brought from his Lord? Is not Hamza, the Master of the Martyrs, my uncle? Is not Ja'far, who flies with two wings in Paradise, my uncle? Has not the saying of the Messenger of Allah reached you, regarding me and my brother: 'These two are the masters of the youth of Paradise'?"</strong>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="speaker-label hussain">Imam Hussain (AS)</div>
+        <div class="arabic-text speech">
+          « فإن كنتم في شكّ‏ٍ من هذا! أفتشكّون أنّي إبن بنت نبيِّكم! فوالله ما بين المشرق والمغرب إبن بنت نبيّ غيري فيكم ولا في غيركم. ويحكم! أتطلبوني بقتيل منكم قتلته! أو مالٍ لكم استهلكته! أو بقصاص جراحة!؟ »
+        </div>
+        <div class="english-text translation">
+          <strong>"If you are in doubt about this, do you then doubt that I am the son of the daughter of your Prophet?! By Allah, there is no grandson of a Prophet between the East and the West other than me — neither among you nor among anyone else! Woe to you! Do you seek me for a slain one of yours whom I killed? Or for wealth of yours that I consumed? Or for retribution of a wound?"</strong>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text">
+          فأخذوا لا يكلِّمونه.
+        </div>
+        <div class="english-text translation">
+          But they did not speak to him. <em>They fell silent.</em>
+        </div>
+      </div>
+    </section>
+
+    <div class="ornament-divider fade-in"><span class="line"></span><span class="diamond"></span><span class="line"></span></div>
+
+    <!-- === SECTION 5: Speech of Zuhair === -->
+    <section class="narrative-section" id="section-5">
+      <div class="section-header">
+        <div class="section-number">Chapter V</div>
+        <h2 class="section-title-ar">خطبة زهير بن القين</h2>
+        <p class="section-title-en">The Address of Zuhair ibn al-Qayn</p>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text">
+          قال الراوي ثم خرج إلينا زهير بن القين على فرس له ذنوب، شاكٌ في السلاح
+        </div>
+        <div class="english-text translation">
+          The narrator said: Then Zuhair ibn al-Qayn came out to us on a long-tailed horse of his, clad in full armor.
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="speaker-label">Zuhair ibn al-Qayn</div>
+        <div class="arabic-text speech">
+          « يا أهل الكوفة نذارِ لكم من عذاب الله نذار، إن حقاً على المسلم نصيحة أخيه المسلم، ونحن حتى الان إخوة وعلى دين واحد وملة واحدة ما لم يقع بيننا وبينكم السيف وأنتم للنصيحة منا أهل، فإذا وقع السيف انقطعت العصمة وكنا أمة وأنتم أمة »
+        </div>
+        <div class="english-text translation">
+          <strong>"O people of Kufa! A warning to you — a warning from the punishment of Allah! It is a duty upon every Muslim to counsel his Muslim brother. We are still, until this moment, brothers and upon one religion and one creed, so long as the sword has not fallen between us and you, and you are worthy of counsel from us. But when the sword falls, the bond of protection will be severed, and we will be one nation and you another."</strong>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="speaker-label">Zuhair ibn al-Qayn</div>
+        <div class="arabic-text speech">
+          « عباد الله إن ولد فاطمة رضوان الله عليها أحق بالود والنصر من ابن سمية، فإن لم تنصروهم فأعيذكم بالله أن تقتلوهم، فخلوا بين هذا الرجل وبين ابن عمه يزيد بن معاوية »
+        </div>
+        <div class="english-text translation">
+          <strong>"O servants of Allah! The children of Fatima (may Allah be pleased with her) are more deserving of love and support than the son of Sumayya. If you will not help them, then I beseech you by Allah not to kill them! Let this man be, and let him go to his cousin Yazid ibn Mu'awiya."</strong>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text">
+          قال فرماه شمر بن ذي الجوشن بسهم وقال: اسكت أسكت الله نَأمَتَكَ، أبرمتنا بكثرة كلامك.
+        </div>
+        <div class="english-text translation">
+          Shimr ibn Dhil-Jawshan shot an arrow at him and said: "Be silent! May Allah silence your voice! You have wearied us with your excessive talk!"
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="speaker-label">Zuhair ibn al-Qayn</div>
+        <div class="arabic-text speech">
+          « ما إياك أخاطب إنما أنت بهيمة والله ما أظنّك تُحْكِمَ من كتاب الله ايتين فأبشر بالخزي يوم القيامة والعذاب الأليم »
+        </div>
+        <div class="english-text translation">
+          <strong>"It is not you I address! You are but a beast! By Allah, I do not think you have mastered even two verses from the Book of Allah. So receive glad tidings of disgrace on the Day of Judgment and a painful torment!"</strong>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text">
+          فناداه رجل فقال له: إن أبا عبد الله عليه السلام يقول لك: « أقبل فلعمري لئن كان مؤمن ال فرعون نصح لقومه وأبلغ في الدعاء لقد نصحت لهؤلاء وأبلغت لو نفع النصح والإبلاغ »
+        </div>
+        <div class="english-text translation">
+          Then a man called out to him: "Abu Abdullah (peace be upon him) says to you: <strong>'Come back, for by my life, if the believer of the family of Pharaoh was sincere in counseling his people and eloquent in his call, then you have been sincere in counseling these people and eloquent — had counsel and eloquence been of any benefit.'"</strong>
+        </div>
+      </div>
+    </section>
+
+    <div class="ornament-divider fade-in"><span class="line"></span><span class="diamond"></span><span class="line"></span></div>
+
+    <!-- === SECTION 6: Speech of Burayr === -->
+    <section class="narrative-section" id="section-6">
+      <div class="section-header">
+        <div class="section-number">Chapter VI</div>
+        <h2 class="section-title-ar">خطبة بُرَيرِ بن خُضَير رضي الله عنه</h2>
+        <p class="section-title-en">The Address of Burayr ibn Khudayr</p>
+      </div>
+
+      <div class="text-block">
+        <div class="speaker-label">Burayr ibn Khudayr</div>
+        <div class="arabic-text speech">
+          « يا هؤلاء! إتّقوا الله فإنّ ثقل محمّد قد أصبح بين أظهركم، هؤلاء ذرّيته وعترته وبناته وحرمه! فهاتوا ما عندكم؟ وما الذي تريدون أن تصنعوا بهم؟! »
+        </div>
+        <div class="english-text translation">
+          <strong>"O you people! Fear Allah, for the family of Muhammad has come to be in your midst! These are his descendants, his progeny, his daughters, and his household! So tell us what you intend, and what do you wish to do with them?!"</strong>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="speaker-label">Burayr ibn Khudayr</div>
+        <div class="arabic-text speech">
+          « أفلا ترضون منهم أن يرجعوا إلى المكان الذي أقبلوا منه؟ ويلكم يا أهل الكوفة! أنسيتم كتبكم إليه وعهودكم التي أعطيتموها من أنفسكم وأشهدتم الله عليها، وكفى بالله شهيداً! ويلكم دعوتم أهل بيت نبيّكم وزعمتم أنّكم تقتلون أنفسكم من دونهم، حتى إذا أتوكم أسلمتوهم لعبيد الله! وحلأتموهم عن ماء الفرات الجاري! بئسما خلفتم محمداً في ذرِّيته! »
+        </div>
+        <div class="english-text translation">
+          <strong>"Will you not be content with them returning to the place from which they came? Woe to you, O people of Kufa! Have you forgotten your letters to him, and your pledges that you gave of your own accord, and called Allah as witness — and Allah suffices as witness! Woe to you! You invited the family of your Prophet, and you claimed that you would sacrifice yourselves for them. But when they came to you, you handed them over to Ubaydullah! And you drove them away from the flowing waters of the Euphrates! How wretched is the way you have succeeded Muhammad in the treatment of his progeny!"</strong>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text">
+          فقال له نفر منهم: يا هذا ما ندري ما تقول؟ فقال برير: « الحمد الله الذي زادني فيكم بصيرة، اللّهم إني أبرأ إليك من فعال هؤلاء القوم! اللّهم ألقِ بأسهم بينهم حتى يلقوك وأنت عليهم غضبان! »
+        </div>
+        <div class="english-text translation">
+          Some of them said: "We don't know what you're talking about!" Burayr replied: <strong>"Praise be to Allah, Who has increased my insight regarding you! O Allah, I disassociate myself from the deeds of these people! O Allah, cast Your wrath between them until they meet You while You are angry with them!"</strong> Then the enemy began shooting arrows at him, and Burayr retreated.
+        </div>
+      </div>
+    </section>
+
+    <div class="ornament-divider fade-in"><span class="line"></span><span class="diamond"></span><span class="line"></span></div>
+
+    <!-- === SECTION 7: Second Speech — HAYHAT MINNA AL-DHILLA === -->
+    <section class="narrative-section" id="section-7">
+      <div class="section-header">
+        <div class="section-number">Chapter VII</div>
+        <h2 class="section-title-ar">خطبة الحسين عليه السلام الثانية</h2>
+        <p class="section-title-en">The Second Address — "Far Be Disgrace From Us"</p>
+      </div>
+
+      <div class="text-block">
+        <div class="speaker-label hussain">Imam Hussain (AS)</div>
+        <div class="arabic-text speech">
+          « الحمد لله الذي خلق الدنيا فجعلها دار فناء وزوال، متصرفة بأهلها حالا بعد حال، فالمغرور من غرته، والشقي من فتنته، فلا تغرنكم الحياة الدنيا ولا يغرنكم بالله الغَرور »
+        </div>
+        <div class="english-text translation">
+          <strong>"Praise be to Allah Who created the world and made it an abode of annihilation and dissolution, changing its people from state to state. Deluded is he whom it deceives, and wretched is he whom it tempts. So let not the life of this world delude you, and let not the Deceiver deceive you concerning Allah."</strong>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="speaker-label hussain">Imam Hussain (AS)</div>
+        <div class="arabic-text speech">
+          « تباً لكم أيتها الجماعة وترحاً، استصرختمونا والهين، فأصرخناكم مُوجفين، سَلَلتُم علينا سيفاً لنا في أيمانكم، وحَشَشتُم علينا ناراً اقتدحناها على عدونا وعدوكم، فأصبحتم إلباً لأعدائكم على أوليائكم، بغير عدلٍ أفشوه فيكم، ولا أملٍ أصبح لكم فيهم »
+        </div>
+        <div class="english-text translation">
+          <strong>"Woe to you, O assembly, and may sorrow befall you! You cried out to us in anguish, and we hastened to your aid with urgency. Yet you have drawn against us a sword that was in our own hands, and you have kindled against us a fire that we had struck against your enemy and ours! And so you became allies of your enemies against your friends — with no justice that they spread among you, and no hope that you gained from them."</strong>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="speaker-label hussain">Imam Hussain (AS)</div>
+        <div class="arabic-text speech" style="border-right-color: var(--crimson-bright); background: rgba(220, 20, 60, 0.05); font-size: 1.6rem;">
+          ألا وإن الدعي ابن الدعي قد ركز بين اثنتين، بين السِلة والذِلة وهيهات منا الذلة، يأبى الله ذلك لنا ورسوله والمؤمنون، وحجور طابت وطهرت، وأنوف حَمية ونفوسٌ أبية، من أن تؤثر طاعة اللئام على مصارع الكرام
+        </div>
+        <div class="english-text translation" style="border-left-color: var(--crimson-bright);">
+          <strong>"Indeed, the illegitimate son of the illegitimate has lodged us between two choices — between the sword and humiliation. And FAR BE DISGRACE FROM US! Allah refuses that for us, and His Messenger, and the believers; and pure laps that nurtured us, and zealous souls, and proud spirits — they refuse that we should prefer obedience to the ignoble over the death of the honorable."</strong>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="speaker-label hussain">Imam Hussain (AS)</div>
+        <div class="arabic-text speech">
+          « ألا وإني زاحفٌ بهذه الأسرةِ مع قِلةِ العدد وخُذلةِ الناصر »
+        </div>
+        <div class="english-text translation">
+          <strong>"Indeed, I shall advance with this family, despite the scarcity of our numbers and the desertion of our supporters."</strong>
+        </div>
+      </div>
+
+      <div class="poetry-block">
+        <div class="arabic-line">فإن نُهزم فهزّامون قِدمَا</div>
+        <div class="english-line">"If we conquer, we were conquerors before,</div>
+        <div class="arabic-line">وإن نُغلَب فغيرُ مُغلَبينا</div>
+        <div class="english-line">And if we are overcome — we are not truly vanquished.</div>
+        <div class="arabic-line">وما إن طَبنَا جُبنٌ ولَكِن</div>
+        <div class="english-line">Cowardice is not in our nature, rather</div>
+        <div class="arabic-line">مَنَايانا ودَولةُ آخرينا</div>
+        <div class="english-line">It is our fated hour, and the turn of others.</div>
+        <div class="arabic-line">فقُل للشامتينَ بنا أفيقوا</div>
+        <div class="english-line">So say to those who gloat over us: awaken!</div>
+        <div class="arabic-line">سيَلقى الشامتونَ كما لَقينا</div>
+        <div class="english-line">For the gloaters shall meet what we have met."</div>
+      </div>
+
+      <div class="text-block">
+        <div class="speaker-label hussain">Imam Hussain (AS)</div>
+        <div class="arabic-text speech">
+          « ثم أيم الله لا تلبثون بعدها إلا كريث ما يُركب الفرس، حتى تدور بكم دور الرحى وتقلق بكم قلق المحور، عهد عهده إليّ أبي عن جدي. فاجمعوا أمركم وشركائكم، ثم لا يكن أمركم عليكم غمة ثم اقضوا إلي ولا تنظرون، إني توكلت على الله ربى وربكم، ما من دابة إلا هو آخذ بناصيتها إن ربي على صراط مستقيم »
+        </div>
+        <div class="english-text translation">
+          <strong>"Then, by Allah, you shall not linger after this except as briefly as it takes to mount a horse, until fate spins you as the millstone spins, and shakes you as the axle shakes. A covenant my father conveyed to me from my grandfather. So gather your resolve and your allies, then let not your affair be a cause of anguish to you. Pass your verdict upon me and give me no respite. Indeed, I have placed my trust in Allah, my Lord and your Lord. There is no creature but that He holds it by its forelock. Truly my Lord is upon a straight path."</strong>
+        </div>
+      </div>
+    </section>
+
+    <div class="ornament-divider fade-in"><span class="line"></span><span class="diamond"></span><span class="line"></span></div>
+
+    <!-- === SECTION 8: Al-Hurr's Repentance === -->
+    <section class="narrative-section" id="section-8">
+      <div class="section-header">
+        <div class="section-number">Chapter VIII</div>
+        <h2 class="section-title-ar">موقف الحر الرياحي</h2>
+        <p class="section-title-en">The Repentance of Al-Hurr al-Riyahi</p>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text">
+          وجاء الحر بن يزيد الرياحي، إلى عمر بن سعد، فقال له: « أمقاتل أنت هذا الرجل؟ » قال: إي والله قتالاً أيسره أن تسقط الرؤوس وتطيح الأيدي. قال الحر: « أفما لكم في واحدة من الخصال التي عرض عليكم رضاً؟ »
+        </div>
+        <div class="english-text translation">
+          Al-Hurr ibn Yazid al-Riyahi came to Umar ibn Sa'd and asked: <strong>"Are you really going to fight this man?"</strong> He replied: "Yes, by Allah! A fight in which the least of it is that heads will fall and hands will fly." Al-Hurr said: <strong>"Is there not in one of the options he offered you any satisfaction?"</strong>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text">
+          فأقبل الحر يدنو من حسين قليلاً قليلاً. فقال له رجل من قومه يُقال له المهاجر بن أوس: ما تريد يا ابن يزيد؟ أتريد أن تحمل؟ فسكت وأخذته رعدة. فقال له صاحبه: يا ابن يزيد والله إن أمرك لمريب والله ما رأيت منك في موقفٍ قط مثل شيء أراه الان، ولو قيل لي من أشجع أهل الكوفة رجلاً ما عدوتك، فما هذا الذى أرى منك؟
+        </div>
+        <div class="english-text translation">
+          Al-Hurr began to edge closer to Hussain, little by little. A man from his tribe named Al-Muhajir ibn Aws said to him: "What do you intend, O son of Yazid? Do you intend to charge?" But Al-Hurr was silent, and a trembling seized him. His companion said: "O son of Yazid! By Allah, your behavior is suspicious! By Allah, I have never seen you like this in any situation! If I were asked who is the bravest man of Kufa, I would not look beyond you. What is this I see in you?"
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="speaker-label">Al-Hurr al-Riyahi</div>
+        <div class="arabic-text speech" style="font-size: 1.55rem;">
+          « إني والله أخيّر نفسي بين الجنة والنار، ووالله لا أختار على الجنة شيئاً ولو قطعت وحرقت »
+        </div>
+        <div class="english-text translation">
+          <strong>"By Allah, I am choosing for myself between Paradise and the Fire. And by Allah, I will not choose anything over Paradise — even if I am cut to pieces and burned!"</strong>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text">
+          ثم ضرب فرسه فلحق بالإمام الحسين عليه السلام
+        </div>
+        <div class="english-text translation">
+          <em>Then he spurred his horse and rode to Imam Hussain (peace be upon him).</em>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="speaker-label">Al-Hurr al-Riyahi</div>
+        <div class="arabic-text speech">
+          « جعلني الله فداك يا ابن رسول الله، أنا صاحبك الذي حبستك عن الرجوع وسايرتك في الطريق، وجعجعت بك في هذا المكان. والله الذي لا إله إلا هو ما ظننت أن القوم يردون عليك ما عرضت عليهم أبداً ولا يبلغون منك هذه المنزلة... وإني قد جئتك تائباً مما كان مني إلى ربي ومواسياً لك بنفسي حتى أموت بين يديك أفترى ذلك لي توبة؟ »
+        </div>
+        <div class="english-text translation">
+          <strong>"May Allah make me your ransom, O son of the Messenger of Allah! I am the one who prevented you from returning, and escorted you on the road, and confined you in this place. By Allah, besides Whom there is no god, I never imagined that these people would reject the offers you made them, nor that they would bring you to this state... I have come to you repentant to my Lord for what I have done, offering myself in your service until I die before you. Do you see in this a repentance for me?"</strong>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="speaker-label hussain">Imam Hussain (AS)</div>
+        <div class="arabic-text speech" style="font-size: 1.6rem; text-align: center;">
+          « نعم يتوب الله عليك ويغفر لك. ما اسمك؟ » قال: « أنا الحر بن يزيد » قال عليه السلام: « أنت الحر كما سمتك أمك، أنت الحر إن شاء الله في الدنيا والآخرة، انزل »
+        </div>
+        <div class="english-text translation" style="text-align: center;">
+          <strong>"Yes, Allah will accept your repentance and forgive you. What is your name?"</strong> He said: "I am Al-Hurr ibn Yazid." He (peace be upon him) said: <strong>"You are Al-Hurr (The Free) as your mother named you. You are the free one, God willing, in this world and the Hereafter. Dismount."</strong>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text">
+          قال: « أنا لك فارساً خير مني راجلاً أقاتلهم على فرسي ساعة وإلى النزول ما يصير آخر أمري » قال الحسين عليه السلام: « فاصنع يرحمك الله ما بدا لك »
+        </div>
+        <div class="english-text translation">
+          Al-Hurr said: <strong>"I am of greater use to you as a horseman than as a foot soldier. I shall fight them on my horse awhile, and dismounting will be my final act."</strong> Hussain (peace be upon him) said: <strong>"Do as you wish, may Allah have mercy on you."</strong>
+        </div>
+      </div>
+    </section>
+
+    <div class="ornament-divider fade-in"><span class="line"></span><span class="diamond"></span><span class="line"></span></div>
+
+    <!-- === SECTION 9: Beginning of Battle === -->
+    <section class="narrative-section" id="section-9">
+      <div class="section-header">
+        <div class="section-number">Chapter IX</div>
+        <h2 class="section-title-ar">بداية الحرب</h2>
+        <p class="section-title-en">The Beginning of Battle</p>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text">
+          وتقدم عمر بن سعد فرمى نحو عسكر الحسين عليه السلام بسهم وقال: اشهدوا لي عند الأمير أني أول من رمى وأقبلت السهام من القوم كأنها المطر.
+        </div>
+        <div class="english-text translation">
+          Umar ibn Sa'd stepped forward and shot an arrow toward Hussain's camp, saying: "Bear witness for me before the governor that I was the first to shoot!" Then arrows rained down upon them like a downpour.
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="speaker-label hussain">Imam Hussain (AS)</div>
+        <div class="arabic-text speech">
+          « قوموا رحمكم الله إلى الموت الذى لابد منه، فإن هذه السهام رسل القوم إليكم »
+        </div>
+        <div class="english-text translation">
+          <strong>"Rise, may Allah have mercy on you, to face the death that is inevitable. For these arrows are the messengers of this people to you."</strong>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text">
+          فقام عبد الله بن عمير الكلبي، فقال: « أبا عبد الله! رحمك الله، ائذن لي فلأخرج اليهما » فأذن له، فشد عليهما وقتلهما. فأخذت أم وهب امرأته عموداً ثم أقبلت نحو زوجها تقول له: « فداك أبي وأمي! قاتل دون الطيبين ذرية محمد »
+        </div>
+        <div class="english-text translation">
+          Abdullah ibn Umayr al-Kalbi asked permission and was the first to engage. He charged and killed two challengers. His wife, Umm Wahb, then took a tent pole and approached her husband saying: <strong>"May my father and mother be your ransom! Fight for the pure progeny of Muhammad!"</strong>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="speaker-label hussain">Imam Hussain (AS)</div>
+        <div class="arabic-text speech">
+          « جزيتم من أهل بيت خيراً، ارجعي رحمك الله إلى النساء، فإنه ليس على النساء قتال »
+        </div>
+        <div class="english-text translation">
+          <strong>"May you be rewarded well on behalf of the Household. Return, may Allah have mercy on you, to the women, for there is no fighting upon women."</strong>
+        </div>
+      </div>
+    </section>
+
+    <div class="ornament-divider fade-in"><span class="line"></span><span class="diamond"></span><span class="line"></span></div>
+
+    <!-- === SECTION 10: The First Charge === -->
+    <section class="narrative-section" id="section-10">
+      <div class="section-header">
+        <div class="section-number">Chapter X</div>
+        <h2 class="section-title-ar">الحملة الأولى</h2>
+        <p class="section-title-en">The First Charge</p>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text">
+          فحمل عمرو بن الحجاج في ميمنة جيش عمر بن سعد من نحو الفرات فاضطربوا ساعة، وما ارتفعت الغبرة إلا ومسلم بن عوسجة الأسدي صريع. فمشى إليه الإمام الحسين عليه السلام فإذا به رمق.
+        </div>
+        <div class="english-text translation">
+          Amr ibn al-Hajjaj charged with the right flank of Ibn Sa'd's army from the direction of the Euphrates. They clashed for some time, and when the dust settled, <strong>Muslim ibn Awsaja al-Asadi</strong> lay felled. Imam Hussain (peace be upon him) walked to him and found him with a last breath of life.
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="speaker-label hussain">Imam Hussain (AS)</div>
+        <div class="quran-verse">
+          ﴿ فَمِنْهُم مَّن قَضَى نَحْبَهُ وَمِنْهُم مَّن يَنتَظِرُ وَمَا بَدَّلُوا تَبْدِيلًا ﴾
+        </div>
+        <div class="english-text translation" style="text-align: center;">
+          <em>"Among them are those who have fulfilled their vow, and among them are those who still wait — and they have not altered [their commitment] in the least."</em> — Quran 33:23
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text">
+          ودنا منه حبيب بن مظاهر، فقال: « عزّ عليّ مصرعك يا مسلم! أبشر بالجنة! » فقال له مسلم قولاً ضعيفاً: « بشرك الله بخير » فقال له حبيب: « لولا أني أعلم أني في أثرك لاحق بك من ساعتي لأحببت أن توصيني بكل ما أهمك ». فقال له مسلم: « فإني أوصيك بهذا — وأشار إلى الحسين عليه السلام — فقاتل دونه حتى تموت » فقال له حبيب: « لأنعمنك عيناً »
+        </div>
+        <div class="english-text translation">
+          Habib ibn Mudhahir approached him and said: <strong>"Hard upon me is your fall, O Muslim! Receive glad tidings of Paradise!"</strong> Muslim said in a faint voice: <strong>"May Allah give you glad tidings of good."</strong> Habib said: <strong>"Were I not certain that I shall follow you this very hour, I would have wished you to entrust me with all your concerns."</strong> Muslim said: <strong>"I entrust you with this one —"</strong> and he pointed toward Hussain (peace be upon him) — <strong>"fight for him until you die."</strong> Habib replied: <strong>"I shall give you that joy."</strong> Then Muslim's pure soul departed.
+        </div>
+      </div>
+    </section>
+
+    <div class="ornament-divider fade-in"><span class="line"></span><span class="diamond"></span><span class="line"></span></div>
+
+    <!-- === SECTION 11: The Noon Prayer === -->
+    <section class="narrative-section" id="section-11">
+      <div class="section-header">
+        <div class="section-number">Chapter XI</div>
+        <h2 class="section-title-ar">صلاة الظهيرة</h2>
+        <p class="section-title-en">The Noon Prayer</p>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text">
+          وبقي القتال على أشده حتى انتصف النهار... واقترب وقت زوال الشمس، فقال أبو ثمامة الصائدي: « يا أبا عبد الله! نفسي لك الفداء... وأحب أن ألقى ربي وقد صليت هذه الصلاة التي قد دنا وقتها »
+        </div>
+        <div class="english-text translation">
+          The battle raged at its fiercest until midday. More than forty of Hussain's companions had fallen. As the sun passed its zenith, Abu Thumama al-Sa'idi said: <strong>"O Abu Abdullah! My life is your ransom... I wish to meet my Lord having prayed this prayer whose time has drawn near."</strong>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="speaker-label hussain">Imam Hussain (AS)</div>
+        <div class="arabic-text speech">
+          « ذكرت الصلاة، جعلك الله من المصلين الذاكرين، نعم هذا أول وقتها... سلوهم أن يكفوا عنا حتى نصلي »
+        </div>
+        <div class="english-text translation">
+          <strong>"You have mentioned the Prayer — may Allah make you among those who pray and remember Him. Yes, this is the beginning of its time... Ask them to cease from us until we pray."</strong>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text">
+          فقال لهم الحصين بن تميم: إنها لا تُقبل. فرد عليه حبيب بن مظاهر: « زعمت الصلاة من آل الرسول صلى الله عليهم لا تقبل، وتقبل منك يا خَمَّار! »
+        </div>
+        <div class="english-text translation">
+          Al-Husayn ibn Tamim said: "Your prayers will not be accepted!" Habib ibn Mudhahir retorted: <strong>"You claim the prayer of the family of the Messenger (peace be upon them) is not accepted, yet yours is accepted, you drunkard?!"</strong>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text">
+          وقاتل حبيب قتالاً شديداً حتى استشهد، فهدّ ذلك الحسين عليه السلام، وقال: « عند الله أحتسب نفسي وحماة أصحابي »
+        </div>
+        <div class="english-text translation">
+          Habib fought fiercely until he was martyred. This devastated Hussain (peace be upon him), and he said: <strong>"I reckon myself and the protectors among my companions with Allah."</strong>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text">
+          واستبسل الحر يضربهم بسيفه وتكاثروا عليه حتى استشهد رضوان الله عليه، فحمله أصحابه ووضعوه بين يدي الإمام الحسين عليه السلام وبه رمق، فجعل الحسين عليه السلام يمسح وجهه ويقول:
+        </div>
+        <div class="english-text translation">
+          Al-Hurr fought valiantly, striking them with his sword, until they overwhelmed him and he fell. His companions carried him and placed him before Imam Hussain (peace be upon him) with a last breath remaining. Hussain began wiping his face and saying:
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="speaker-label hussain">Imam Hussain (AS)</div>
+        <div class="arabic-text speech" style="text-align: center; font-size: 1.55rem;">
+          « أنتَ الحر كما سمتك أمك، وأنت الحر في الدنيا وأنت الحر في الآخرة »
+        </div>
+        <div class="english-text translation" style="text-align: center;">
+          <strong>"You are Al-Hurr (The Free One) as your mother named you. You are free in this world, and you are free in the Hereafter."</strong>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text">
+          وصلّى الحسين عليه السلام بأصحابه صلاة الظهر. فوصل إلى الحسين عليه السلام سهم فتقدم سعيد بن عبد الله الحنفي ووقف يقيه بنفسه ما زال ولا تخطى، حتى سقط إلى الأرض وهو يقول: « اللهم العنهم لعن عاد وثمود اللهم أبلغ نبيك عني السلام وأبلغه ما لقيت من ألم الجراح فإني أردت ثوابك في نصر ذرية نبيك »
+        </div>
+        <div class="english-text translation">
+          Hussain (peace be upon him) led his companions in the Noon Prayer. An arrow reached toward Hussain, and <strong>Sa'id ibn Abdullah al-Hanafi</strong> stepped forward and stood shielding him with his own body, never stepping aside, until he collapsed to the ground saying: <strong>"O Allah, curse them as You cursed 'Ad and Thamud! O Allah, convey my greetings to Your Prophet and tell him of the pain of my wounds — for I sought Your reward in supporting the progeny of Your Prophet."</strong>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text">
+          ثم التفت إلى الحسين عليه السلام، فقال له: « أوفيّتُ يا ابن رسول الله؟ » فقال الإمام عليه السلام: « نعم، أنتَ أمامي في الجنة » ثم قضى نحبه رضوان الله عليه فوجد به ثلاثة عشر سهماً سوى ما به من ضرب السيوف وطعن الرماح.
+        </div>
+        <div class="english-text translation">
+          He then turned to Hussain (peace be upon him) and asked: <strong>"Have I been faithful, O son of the Messenger of Allah?"</strong> The Imam replied: <strong>"Yes, you are ahead of me in Paradise."</strong> Then he passed away (may Allah be pleased with him). Thirteen arrows were found in his body — apart from sword wounds and spear thrusts.
+        </div>
+      </div>
+    </section>
+
+    <div class="ornament-divider fade-in"><span class="line"></span><span class="diamond"></span><span class="line"></span></div>
+
+    <!-- === SECTION 12: The Second Charge === -->
+    <section class="narrative-section" id="section-12">
+      <div class="section-header">
+        <div class="section-number">Chapter XII</div>
+        <h2 class="section-title-ar">الحملة الثانية</h2>
+        <p class="section-title-en">The Second Charge</p>
+      </div>
+
+      <div class="text-block">
+        <div class="speaker-label hussain">Imam Hussain (AS)</div>
+        <div class="arabic-text speech">
+          « يا كرام، هذه الجنة فُتحت أبوابها واتصلت أنهارها وأينعت ثمارها، وهذا رسول الله صلى الله عليه وآله والشهداء الذين قتلوا في سبيل الله يتوقعون قدومكم، ويتباشرون بكم، فحاموا عن دين الله ودين نبيه، وذبوا عن حرم رسول الله »
+        </div>
+        <div class="english-text translation">
+          <strong>"O noble ones! Paradise has opened its gates, its rivers flow, and its fruits have ripened! The Messenger of Allah (peace be upon him and his family) and the martyrs who were slain in the path of Allah await your arrival and rejoice at your coming. So protect the religion of Allah and the religion of His Prophet, and defend the sanctity of the Messenger of Allah!"</strong>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text">
+          وكان كل من أراد القتال يأتي إلى الحسين عليه السلام يودعه، ويقول: « السلام عليك يا ابن رسول الله » فيجيبه الحسين عليه السلام: « وعليك السلام، ونحن خلفك »
+        </div>
+        <div class="english-text translation">
+          Each companion who wished to fight would come to Hussain (peace be upon him) to bid farewell, saying: <strong>"Peace be upon you, O son of the Messenger of Allah."</strong> And Hussain would answer: <strong>"And upon you be peace, and we are right behind you."</strong>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text">
+          واستأذن زهير بن القين بالقتال ووضع يده على منكب الحسين عليه السلام وهو يقول:
+        </div>
+        <div class="english-text translation">Zuhair ibn al-Qayn sought permission to fight, placing his hand upon the shoulder of Hussain (peace be upon him) as he recited:</div>
+      </div>
+
+      <div class="poetry-block">
+        <div class="arabic-line">أقدم فُديتَ هادياً مهدياً</div>
+        <div class="english-line">"Advance, may I be your ransom, O guide rightly guided!</div>
+        <div class="arabic-line">فاليوم نلقى جدّك النبيا</div>
+        <div class="english-line">Today we shall meet your grandfather, the Prophet,</div>
+        <div class="arabic-line">وحسناً والمرتضى عليا</div>
+        <div class="english-line">And Hasan, and Ali the Chosen,</div>
+        <div class="arabic-line">وذا الجناحين الفتى الكميا</div>
+        <div class="english-line">And the youth with two wings, the valiant one,</div>
+        <div class="arabic-line">وأسد الله الشهيد الحيا</div>
+        <div class="english-line">And the Lion of Allah, the living martyr."</div>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text">
+          وقاتل قتالاً شديداً حتى استشهد رحمه الله. فقال الحسين عليه السلام: « لا يبعدنك الله يا زهير، ولعن الله قاتليك! »
+        </div>
+        <div class="english-text translation">
+          He fought fiercely until he was martyred (may Allah have mercy on him). Hussain (peace be upon him) said: <strong>"May Allah not distance you, O Zuhair, and may Allah curse those who killed you!"</strong>
+        </div>
+      </div>
+    </section>
+
+    <div class="ornament-divider fade-in"><span class="line"></span><span class="diamond"></span><span class="line"></span></div>
+
+    <!-- === SECTION 13: Martyrdom of Ali al-Akbar === -->
+    <section class="narrative-section" id="section-13">
+      <div class="section-header">
+        <div class="section-number">Chapter XIII</div>
+        <h2 class="section-title-ar">مصرع علي الأكبر عليه السلام</h2>
+        <p class="section-title-en">The Martyrdom of Ali al-Akbar</p>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text">
+          ولما لم يبق مع الحسين عليه السلام إلا أهل بيته خاصة. تقدم علي الأكبر بن الحسين عليه السلام وكان من أصبح الناس وجهاً وأحسنهم خلقاً فاستأذن أباه في القتال فأذن له، ثم نظر إليه نظرة آيسٍ منه وأرخى عليه السلام عينيه وبكى.
+        </div>
+        <div class="english-text translation">
+          When none remained with Hussain (peace be upon him) but his own family, <strong>Ali al-Akbar</strong>, the son of Hussain, stepped forward — the most radiant of people in face and the finest in character. He asked his father's permission to fight. Hussain granted it, then looked upon him with a look of one despairing of ever seeing him again, and lowered his eyes and wept.
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="speaker-label hussain">Imam Hussain (AS)</div>
+        <div class="arabic-text dua">
+          « اللهم اشهد على هؤلاء، فقد برز إليهم أشبه الناس خَلقاً وخُلقاً ومنطقاً برسولك محمد صلى الله عليه وآله، وكنا إذا اشتقنا إلى رؤية نبيك نظرنا إليه »
+        </div>
+        <div class="english-text translation">
+          <strong>"O Allah, be witness against these people! For there has gone forth to them the one who most resembles Your Messenger Muhammad (peace be upon him and his family) in appearance, in character, and in speech. Whenever we longed to see Your Prophet, we would look upon him."</strong>
+        </div>
+      </div>
+
+      <div class="poetry-block">
+        <div class="arabic-line">أنا علي بن الحسين بن علي</div>
+        <div class="english-line">"I am Ali, son of Hussain, son of Ali!</div>
+        <div class="arabic-line">نحن وبيت الله أولى بالنبي</div>
+        <div class="english-line">By the House of Allah, we are the nearest to the Prophet!</div>
+        <div class="arabic-line">والله لا يحكم فينا ابن الدعي</div>
+        <div class="english-line">By Allah, the son of the illegitimate shall not rule over us!</div>
+        <div class="arabic-line">أطعنكم بالرمح حتى ينثني</div>
+        <div class="english-line">I shall thrust my spear at you until it bends,</div>
+        <div class="arabic-line">أضربكم بالسيف أحمي عن أبي</div>
+        <div class="english-line">And strike you with the sword, defending my father —</div>
+        <div class="arabic-line">ضرب غلام هاشمي علوي</div>
+        <div class="english-line">The strike of a Hashimite, Alawite youth!"</div>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text">
+          فلم يزل يقاتل حتى ضج الناس من كثرة من قتل منهم. ثم رجع إلى أبيه وقد أصابته جراحات كثيرة فقال: « يا أبه! العطش قد قتلني وثقل الحديد أجهدني، فهل إلى شربة من ماء سبيل أتقوى بها على الأعداء؟ »
+        </div>
+        <div class="english-text translation">
+          He fought until the enemy reeled from the multitude of their slain. Then he returned to his father, covered in wounds, saying: <strong>"O Father! Thirst is killing me and the weight of the armor is exhausting me. Is there any way to a drink of water to strengthen me against the enemy?"</strong>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="speaker-label hussain">Imam Hussain (AS)</div>
+        <div class="arabic-text speech">
+          « يا بني يعز على محمد وعلى علي وعلى أبيك، أن تدعوهم فلا يجيبونك، وتستغيث بهم فلا يغيثونك... خذ هذا الخاتم في فيك وارجع إلى قتال عدوك، فإني أرجو أنك لا تمسي حتى يسقيك جدك بكأسه الأوفى شربة لا تظمأ بعدها أبداً »
+        </div>
+        <div class="english-text translation">
+          <strong>"My son, it grieves Muhammad, and Ali, and your father that you call upon them and they do not answer you, and you cry for their help and they do not help you... Take this ring in your mouth and return to fight your enemy. I hope that before this evening, your grandfather will give you to drink from his overflowing cup — a drink after which you shall never thirst again."</strong>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text">
+          فرجع إلى موقف النزال وقاتل أعظم القتال، فاعترضه مُرّة بن منقذ فطعنه فصرع... فنادى بأعلى صوته: « يا أبتاه! هذا جدي رسول الله صلى الله عليه وآله قد سقاني بكأسه الأوفى شربة لا أظمأ بعدها أبداً، وهو يقول لك: العجل! فإن لك كأساً مذخورة »
+        </div>
+        <div class="english-text translation">
+          He returned to the battlefield and fought the fiercest of fights, until Murra ibn Munqidh thrust him with his spear and he fell. Then he called out at the top of his voice: <strong>"O Father! This is my grandfather, the Messenger of Allah! He has given me to drink from his overflowing cup — a drink after which I shall never thirst again! And he says to you: Hasten! For there is a cup saved for you!"</strong>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text">
+          فصاح الحسين عليه السلام: « واولداه... » وأقبل إلى ولده وأخذ رأسه فوضعه في حجره، وجعل يمسح الدمَ والتراب عن وجهه، وانكب عليه واضعاً خده على خده وجعل يقول: « قتل الله قوماً قتلوك يا بُني! ما أجرأهم على الله وعلى انتهاك حرمة رسول الله صلى الله عليه وآله »
+        </div>
+        <div class="english-text translation">
+          Hussain cried out: <strong>"O my son!"</strong> He rushed to his child, placed his head in his lap, wiping the blood and dust from his face, pressing his cheek against his, and saying: <strong>"May Allah destroy the people who slew you, my son! How bold they are against Allah and in violating the sanctity of the Messenger of Allah!"</strong>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text">
+          وانهملت عيناه بالدموع ثم قال: « على الدنيا بعدك العفا »
+        </div>
+        <div class="english-text translation">
+          His eyes streamed with tears, and he said: <strong>"After you, let the world perish."</strong>
+        </div>
+      </div>
+    </section>
+
+    <div class="ornament-divider fade-in"><span class="line"></span><span class="diamond"></span><span class="line"></span></div>
+
+    <!-- === SECTION 14: Sons of Aqeel === -->
+    <section class="narrative-section" id="section-14">
+      <div class="section-header">
+        <div class="section-number">Chapter XIV</div>
+        <h2 class="section-title-ar">مقاتل آل عقيل عليهم السلام</h2>
+        <p class="section-title-en">The Sons of Aqeel</p>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text">
+          ثم برز أبناء عقيل بن أبي طالب، وأبناء مسلم وأبناء جعفر بن عقيل وجعلوا يقاتلون قتالاً شديداً
+        </div>
+        <div class="english-text translation">
+          Then the sons of Aqeel ibn Abi Talib stepped forward — the sons of Muslim, the sons of Ja'far ibn Aqeel — and they fought with fierce valor.
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="speaker-label hussain">Imam Hussain (AS)</div>
+        <div class="arabic-text speech">
+          « صبراً على الموت يا بني عمومتي، لا رأيتم هواناً بعد هذا اليوم »
+        </div>
+        <div class="english-text translation">
+          <strong>"Patience in the face of death, O sons of my uncles! You shall see no humiliation after this day!"</strong>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text">
+          فجعلوا يستبسلون في الدفاع عن ابن رسول الله صلى الله عليه وآله حتى استشهدوا رحمهم الله.
+        </div>
+        <div class="english-text translation">
+          They gave their all in defending the son of the Messenger of Allah (peace be upon him and his family) until they were all martyred, may Allah have mercy on them.
+        </div>
+      </div>
+    </section>
+
+    <div class="ornament-divider fade-in"><span class="line"></span><span class="diamond"></span><span class="line"></span></div>
+
+    <!-- === SECTION 15: Qasim ibn al-Hasan === -->
+    <section class="narrative-section" id="section-15">
+      <div class="section-header">
+        <div class="section-number">Chapter XV</div>
+        <h2 class="section-title-ar">القاسم بن الحسن عليه السلام</h2>
+        <p class="section-title-en">Qasim ibn al-Hasan</p>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text">
+          وتقدم القاسم بن الإمام الحسن عليه السلام، يستأذن عمه للقتال
+        </div>
+        <div class="english-text translation">
+          Qasim, son of Imam Hasan (peace be upon him), stepped forward asking his uncle's permission to fight. It was as though Imam Hasan refused to be absent from Karbala — five of his sons were present.
+        </div>
+      </div>
+
+      <div class="poetry-block">
+        <div class="arabic-line">إن تُنكروني فأنا فرع الحسن</div>
+        <div class="english-line">"If you do not recognize me — I am the branch of Hasan,</div>
+        <div class="arabic-line">سبط النبي المصطفى والمؤتمن</div>
+        <div class="english-line">Grandson of the Prophet, the Chosen, the Trusted!</div>
+        <div class="arabic-line">هذا الحسين كالأسير المرتهن</div>
+        <div class="english-line">Here is Hussain like a captive held hostage,</div>
+        <div class="arabic-line">بين أناس لا سقوا صوب المزن</div>
+        <div class="english-line">Among a people — may the rain never quench them!"</div>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text">
+          وفيما كان يجول في الميدان ويصول، انقطع شسع نعله، فانحنى ليصلحه... فضرب رأسه بالسيف فوقع الغلام لوجهه فقال: « يا عماه! »
+        </div>
+        <div class="english-text translation">
+          As he was charging through the battlefield, the strap of his sandal broke and he bent down to fix it. A man struck his head with a sword and the boy fell on his face, crying out: <strong>"O Uncle!"</strong>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text">
+          فجلى الحسين عليه السلام كما يجلي الصقر، وانجلت الغبرة فإذا بالحسين عليه السلام قائم على رأس الغلام والغلام يفحص برجليه
+        </div>
+        <div class="english-text translation">
+          Hussain (peace be upon him) swooped in like a falcon. When the dust cleared, Hussain was standing over the boy's head, the boy convulsing with his legs.
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="speaker-label hussain">Imam Hussain (AS)</div>
+        <div class="arabic-text speech">
+          « بعداً لقوم قتلوك ومن خصمهم يوم القيامة فيك جدك... عز والله على عمك أن تدعوه فلا يجيبك أو يجيبك ثم لا ينفعك، صوتٌ والله كثر واتره وقل ناصره »
+        </div>
+        <div class="english-text translation">
+          <strong>"Woe to the people who slew you — and he who will be their adversary on the Day of Judgment on your behalf is your grandfather... By Allah, it grieves your uncle that you call him and he cannot answer you, or he answers and yet cannot help you. A cry, by Allah, whose avengers are many but whose helpers are few."</strong>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text">
+          قال الراوي: ثم احتمله فكأني أنظر إلى رجلي الغلام يخطان في الأرض وقد وضع حسين صدره على صدره.
+        </div>
+        <div class="english-text translation">
+          The narrator said: <em>"Then he lifted him, and I can still see the boy's legs dragging on the ground as Hussain pressed his own chest against the boy's chest."</em> He carried him and laid him alongside his son Ali among the fallen of his household.
+        </div>
+      </div>
+    </section>
+
+    <div class="ornament-divider fade-in"><span class="line"></span><span class="diamond"></span><span class="line"></span></div>
+
+    <!-- === SECTION 16: Brothers of Abbas === -->
+    <section class="narrative-section" id="section-16">
+      <div class="section-header">
+        <div class="section-number">Chapter XVI</div>
+        <h2 class="section-title-ar">مقاتل إخوة العباس عليهم السلام</h2>
+        <p class="section-title-en">The Brothers of Al-Abbas</p>
+      </div>
+
+      <div class="text-block">
+        <div class="speaker-label">Al-Abbas (AS) — to his brothers</div>
+        <div class="arabic-text speech">
+          « تقدموا حتى أراكم قد نصحتم لله ولرسوله، تقدموا، بنفسي أنتم، فحاموا عن سيدكم حتى تقتلوا دونه »
+        </div>
+        <div class="english-text translation">
+          Al-Abbas (peace be upon him) said to his full brothers — Abdullah, Ja'far, and Uthman, sons of Umm al-Banin: <strong>"Advance, so that I may see you have been faithful to Allah and His Messenger! Advance — I would sacrifice myself for you! Protect your master until you are slain before him!"</strong>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text">
+          فتقدموا جميعاً فصاروا أمام الحسين عليه السلام، يقونه بوجوههم ونحورهم. فكان أول من برز منهم عبد الله بن أمير المؤمنين، وقاتل قتالاً شديداً حتى استشهد. ثم برز بعده جعفر، ثم عثمان وجدوا في القتال حتى قتلوا رضي الله عنهم أجمعين.
+        </div>
+        <div class="english-text translation">
+          They all advanced and positioned themselves before Hussain (peace be upon him), shielding him with their faces and their chests. The first to engage was <strong>Abdullah</strong>, who fought fiercely until he was martyred. Then <strong>Ja'far</strong>, then <strong>Uthman</strong> — all fought with zeal until they were slain, may Allah be pleased with them all.
+        </div>
+      </div>
+    </section>
+
+    <div class="ornament-divider fade-in"><span class="line"></span><span class="diamond"></span><span class="line"></span></div>
+
+    <!-- === SECTION 17: Martyrdom of Abbas === -->
+    <section class="narrative-section" id="section-17">
+      <div class="section-header">
+        <div class="section-number">Chapter XVII</div>
+        <h2 class="section-title-ar">شهادة العباس عليه السلام</h2>
+        <p class="section-title-en">The Martyrdom of Al-Abbas</p>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text">
+          وبقي العباس بن علي قائماً أمام الحسين عليهم السلام يقاتل دونه، ويميل معه حيث مال. وفي اليوم العاشر من المحرم سمع أبو الفضل عليه السلام الأطفال ينادون: « العطش العطش » فخرج يطلب الماء ليوصله إليهم.
+        </div>
+        <div class="english-text translation">
+          Al-Abbas ibn Ali remained standing before Hussain, fighting in his defense and moving wherever he moved. On the tenth of Muharram, Abu al-Fadl (peace be upon him) heard the <strong>children crying: "Thirst! Thirst!"</strong> He went out to fetch water for them.
+        </div>
+      </div>
+
+      <div class="poetry-block">
+        <div class="arabic-line">لا أرهب الموت إذا الموت زقا</div>
+        <div class="english-line">"I do not fear death when death arrives,</div>
+        <div class="arabic-line">حتى أوارى في المصاليت لُقى</div>
+        <div class="english-line">Until I lay among the warriors fallen.</div>
+        <div class="arabic-line">نفسي لنفس المصطفى الطهر وقا</div>
+        <div class="english-line">My soul is a shield for the soul of the Pure Chosen One.</div>
+        <div class="arabic-line">إني أنا العباس أغدو بالسقا</div>
+        <div class="english-line">I am Al-Abbas, setting out with the water-skin!</div>
+        <div class="arabic-line">ولا أخاف الشر يوم الملتقى</div>
+        <div class="english-line">And I fear no evil on the day of encounter!"</div>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text">
+          ومضى عليه السلام يشق الصفوف، ويفرق الكتائب، فلما رأوا جولاته العلوية... وما صنعت يمينه، لجأوا إلى الحيلة والغدر. فكمن له زيد بن ورقاء الجهني من وراء نخلة فضربه على يمينه فقطعها فأخذ السيف بشماله.
+        </div>
+        <div class="english-text translation">
+          He (peace be upon him) charged forth, cleaving through their ranks and scattering their battalions. When they saw his Alawite charges and what his right hand wrought, they resorted to treachery and ambush. Zayd ibn Warqa' al-Juhani lay in wait behind a palm tree and struck his right hand, severing it. Al-Abbas took the sword in his left hand.
+        </div>
+      </div>
+
+      <div class="poetry-block">
+        <div class="arabic-line">والله إن قطعتم يميني</div>
+        <div class="english-line">"By Allah, though you sever my right hand,</div>
+        <div class="arabic-line">إني أحامي أبداً عن ديني</div>
+        <div class="english-line">I shall forever defend my religion</div>
+        <div class="arabic-line">وعن إمام صادق اليقين</div>
+        <div class="english-line">And an Imam of true and certain faith —</div>
+        <div class="arabic-line">نجل النبي الطاهر الأمين</div>
+        <div class="english-line">The son of the Prophet, the Pure, the Trustworthy!"</div>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text">
+          فكمن له الحكم بن الطفيل الطائي من وراء نخلة فضربه على شماله فقطعها.
+        </div>
+        <div class="english-text translation">
+          Then Al-Hakam ibn al-Tufayl al-Ta'i ambushed him from behind another palm tree and struck his left hand, severing it.
+        </div>
+      </div>
+
+      <div class="poetry-block">
+        <div class="arabic-line">يا نفس لا تخشي من الكفار</div>
+        <div class="english-line">"O my soul, do not fear the disbelievers!</div>
+        <div class="arabic-line">وأبشري برحمة الجبار</div>
+        <div class="english-line">Rejoice in the mercy of the Almighty!</div>
+        <div class="arabic-line">قد قطعوا ببغيهم يساري</div>
+        <div class="english-line">They have severed, in their transgression, my left hand —</div>
+        <div class="arabic-line">فأصلهم يا رب حر النار</div>
+        <div class="english-line">So cast them, O Lord, into the heat of the Fire!"</div>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text">
+          فضربه ملعون بعمود من حديد... وكأني بأبي الفضل العباس عليه السلام يردد: « يا نفس من بعد الحسين هوني وبعده لا كنت أو تكوني... أخي أبا عبد الله، عليك مني السلام »
+        </div>
+        <div class="english-text translation">
+          Then a cursed one struck him with an iron mace. And as if one could hear Abu al-Fadl al-Abbas (peace be upon him) murmuring: <strong>"O my soul, after Hussain be humbled, and after him, exist not or be not... My brother Abu Abdullah — upon you from me be peace."</strong>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text">
+          فلما رآه الحسين عليه السلام صريعاً على شط الفرات بكى بكاءً شديداً... ويروى أن الحسين أدركه وبه رمق الحياة، فأخذ رأسه الشريف ووضعه في حجره، وجعل يمسح الدم والتراب عنه ثم بكى بكاءً عالياً قائلاً: « الآن انكسر ظهري، وقلّت حيلتي، وشمت بي عدوي »
+        </div>
+        <div class="english-text translation">
+          When Hussain (peace be upon him) saw him fallen by the banks of the Euphrates, he wept profoundly. It is narrated that Hussain reached him while a breath of life remained. He took his noble head and placed it in his lap, wiping the blood and dust from him, and wept aloud, saying: <strong>"Now my back is broken, my recourse is gone, and my enemy gloats over me."</strong>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text">
+          وقد ترك الحسين عليه السلام أخاه العباس في مكانه، وقام عنه بعد أن فاضت نفسه الزكية، ولم يحمله إلى الفسطاط.
+        </div>
+        <div class="english-text translation">
+          <em>Hussain (peace be upon him) left his brother Al-Abbas where he lay after his pure soul departed. He did not carry him to the tent as he had carried the others.</em>
+        </div>
+      </div>
+    </section>
+
+    <div class="ornament-divider fade-in"><span class="line"></span><span class="diamond"></span><span class="line"></span></div>
+
+    <!-- === SECTION 18: Martyrdom of Imam Hussain === -->
+    <section class="narrative-section" id="section-18">
+      <div class="section-header">
+        <div class="section-number">Chapter XVIII</div>
+        <h2 class="section-title-ar">مصرع الإمام الحسين عليه السلام</h2>
+        <p class="section-title-en">The Martyrdom of Imam Hussain</p>
+      </div>
+
+      <div class="text-block">
+        <div class="speaker-label hussain">Imam Hussain (AS)</div>
+        <div class="arabic-text speech" style="font-size: 1.55rem; text-align: center;">
+          « هل من ذاب يذب عن حرم رسول الله صلى الله عليه وآله؟ هل من موحد يخاف الله فينا؟ هل من مغيث يرجو الله بإغاثتنا؟ هل من معين يرجو ما عند الله في إعانتنا؟ »
+        </div>
+        <div class="english-text translation" style="text-align: center;">
+          <strong>"Is there any defender who will defend the sanctity of the Messenger of Allah? Is there any believer in the Oneness of God who fears Allah regarding us? Is there any rescuer who hopes in Allah by rescuing us? Is there any helper who seeks what is with Allah by helping us?"</strong>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text">
+          فارتفعت أصوات النساء بالعويل. فتقدم إلى باب الخيمة وقال لزينب عليها السلام: « ناوليني ولدى الصغير حتى أودعه » فأخذه وأومأ إليه ليقبله فرماه حرملة بن الكاهل الأسدي بسهم فوقع في نحره فذبحه.
+        </div>
+        <div class="english-text translation">
+          The women's voices rose in wailing. He approached the entrance of the tent and said to Zainab (peace be upon her): <strong>"Hand me my infant son so I may bid him farewell."</strong> He took the child and leaned to kiss him, when <strong>Harmala ibn Kahil al-Asadi</strong> shot an arrow that struck the infant's throat and slaughtered him.
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="speaker-label hussain">Imam Hussain (AS)</div>
+        <div class="arabic-text speech">
+          « هوّن عليّ ما نزل بي إنه بعين الله »
+        </div>
+        <div class="english-text translation">
+          He caught the blood in his palms, and when they were full, he cast it toward the sky and said: <strong>"What has befallen me is made light by the fact that it is in the sight of Allah."</strong>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text">
+          ثم إن الحسين عليه السلام دعا الناس إلى البراز فلم يزل يقتل كل من برز إليه حتى قتل مقتلة عظيمة وهو في ذلك يقول:
+        </div>
+        <div class="english-text translation">
+          Then Hussain (peace be upon him) called the enemy to single combat, and continued to slay every man who dared to face him, inflicting great losses, while reciting:
+        </div>
+      </div>
+
+      <div class="poetry-block">
+        <div class="arabic-line" style="font-size: 1.5rem;">القتل أولى من ركوب العار</div>
+        <div class="english-line" style="font-size: 1.1rem;">"Death is worthier than riding the steed of dishonor,</div>
+        <div class="arabic-line" style="font-size: 1.5rem;">والعار أولى من دخول النار</div>
+        <div class="english-line" style="font-size: 1.1rem;">And dishonor is worthier than entering the Fire."</div>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text">
+          قال بعض الرواة: فوالله ما رأيت مكثوراً قط قد قُتل ولده وأهل بيته وأصحابه أربطَ جأشاً منه، وإن كانت الرجال لتشد عليه فيشد عليها بسيفه فتنكشف عنه انكشاف المعزى إذا شد فيها الذئب.
+        </div>
+        <div class="english-text translation">
+          One of the narrators said: <em>"By Allah, I have never seen a man so outnumbered, having lost his sons, his family, and his companions, with a steadier heart than he. The men would charge at him and he would charge back with his sword, and they would scatter from him as goats scatter when the wolf pounces among them."</em>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="speaker-label hussain">Imam Hussain (AS)</div>
+        <div class="arabic-text speech">
+          « ويلكم يا شيعة آل أبي سفيان إن لم يكن لكم دين وكنتم لا تخافون المعاد فكونوا أحراراً في دنياكم هذه وارجعوا إلى أحسابكم إن كنتم عُرباً كما تزعمون »
+        </div>
+        <div class="english-text translation">
+          <strong>"Woe to you, O followers of the house of Abu Sufyan! If you have no religion and do not fear the Reckoning, then at least be free men in this world of yours, and return to your noble lineage — if you are truly Arabs as you claim!"</strong>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text">
+          فبينا هو واقف، إذ أتاه حجر فوقع على جبهته، فأخذ الثوب ليمسح الدم عن جبهته، فأتاه سهم مسموم له ثلاث شعب فوقع على قلبه. فقال عليه السلام: « بسم الله وبالله وعلى ملة رسول الله صلى الله عليه وآله »
+        </div>
+        <div class="english-text translation">
+          As he stood, a stone struck his forehead. He took cloth to wipe the blood from his brow, when a poisoned arrow with three prongs struck his heart. He said: <strong>"In the Name of Allah, and by Allah, and upon the creed of the Messenger of Allah."</strong>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="speaker-label hussain">Imam Hussain (AS)</div>
+        <div class="arabic-text dua">
+          « إلهي أنت تعلم إنهم يقتلون رجلاً ليس على وجه الأرض ابن بنت نبي غيره »
+        </div>
+        <div class="english-text translation" style="text-align: center;">
+          <strong>"My God, You know that they are killing a man for whom there is no other grandson of a Prophet on the face of the earth."</strong>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text">
+          فطعنه صالح ابن وهب المري على خاصرته طعنةً فسقط الحسين عليه السلام إلى الأرض على خده الأيمن وهو يقول: « بسم الله وبالله وعلى ملة رسول الله » ثم قام عليه السلام.
+        </div>
+        <div class="english-text translation">
+          Salih ibn Wahb al-Muzani thrust him in his side, and Hussain (peace be upon him) fell to the earth upon his right cheek, saying: <strong>"In the Name of Allah, and by Allah, and upon the creed of the Messenger of Allah."</strong> Then he rose again.
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="speaker-label hussain">Imam Hussain (AS) — Final Supplication</div>
+        <div class="arabic-text dua" style="font-size: 1.35rem;">
+          « اللهم متعالي المكان، عظيم الجبروت، شديد المحال، غني عن الخلائق، عريض الكبرياء، قادر على ما تشاء... أدعوك محتاجاً وأرغب إليك فقيراً، وأفزع إليك خائفاً، وأبكي مكروباً، وأستعين بك ضعيفاً وأتوكل عليك كافياً. اللهم احكم بيننا وبين قومنا، فإنهم غرونا وخذلونا، وغدروا بنا وقتلونا، ونحن عترة نبيك، وولد حبيبك محمد الذي اصطفيته بالرسالة وائتمنته على الوحي، فاجعل لنا من أمرنا فرجاً ومخرجاً يا أرحم الراحمين »
+        </div>
+        <div class="english-text translation">
+          <strong>"O Allah, Exalted in station, Great in might, Severe in power, Self-Sufficient above all creation, Vast in majesty, Able to do as You will... I call upon You in need, I turn to You in poverty, I flee to You in fear, I weep to You in anguish, I seek Your help in weakness, and I rely upon You as my sufficiency. O Allah, judge between us and our people, for they deceived us, abandoned us, betrayed us, and slew us — and we are the progeny of Your Prophet, the children of Your beloved Muhammad whom You chose for the Message and entrusted with Your Revelation. So grant us relief and a way out of our affair, O Most Merciful of the Merciful!"</strong>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="speaker-label hussain">Imam Hussain (AS)</div>
+        <div class="arabic-text dua" style="font-size: 1.4rem;">
+          « صبراً على قضائك يا رب، لا إله سواك، يا غياث المستغيثين، مالي رب سواك ولا معبود غيرك، صبراً على حكمك، يا غياث من لا غياث له، يا دائماً لا نفاد له، يا محيي الموتى، يا قائماً على كل نفسٍ بما كسبت، احكم بيني وبينهم وأنت خير الحاكمين »
+        </div>
+        <div class="english-text translation">
+          <strong>"Patience upon Your decree, O Lord! There is no god but You, O Rescuer of those who cry for rescue! I have no Lord but You and no deity besides You! Patience upon Your judgment, O Rescuer of the one who has no rescuer! O the Everlasting Who never perishes! O the Reviver of the dead! O the One Who watches over every soul in what it earns! Judge between me and them, and You are the Best of Judges."</strong>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text">
+          قال أحد رواة السيرة: فوالله ما رأيت قط قتيلاً مضمخاً بدمه أحسن منه ولا أنور وجهاً، ولقد شغلني نور وجهه وجمال هيئته عن الفكرة في قتله.
+        </div>
+        <div class="english-text translation">
+          One of the narrators recounted: <em>"By Allah, I have never seen a slain man drenched in his own blood more beautiful than he, nor more luminous of face. The light of his face and the beauty of his bearing distracted me from even thinking about his killing."</em>
+        </div>
+      </div>
+    </section>
+
+    <div class="ornament-divider fade-in"><span class="line"></span><span class="diamond"></span><span class="line"></span></div>
+
+    <!-- === SECTION 19: Zainab's Lament === -->
+    <section class="narrative-section" id="section-19">
+      <div class="section-header">
+        <div class="section-number">Chapter XIX</div>
+        <h2 class="section-title-ar">ندبة زينب عليها السلام</h2>
+        <p class="section-title-en">The Lament of Lady Zainab</p>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text">
+          وخرجت عند ذلك مولاتنا زينب عليها السلام تندب الحسين عليه السلام وتنادي بصوتٍ حزين وقلبٍ كئيب:
+        </div>
+        <div class="english-text translation">
+          Then our Lady Zainab (peace be upon her) emerged, lamenting Hussain, calling out in a grief-stricken voice and a sorrowful heart:
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="speaker-label">Lady Zainab (AS)</div>
+        <div class="arabic-text speech" style="border-right-color: var(--crimson-bright); background: rgba(220, 20, 60, 0.04); font-size: 1.5rem; text-align: center; line-height: 2.4;">
+          « يا محمداه صلى عليك ملائكة السماء، هذا حسين مرمل بالدماء، مقطع الأعضاء، وبناتك سبايا، إلى الله المشتكى وإلى محمد المصطفى وإلى علي المرتضى وإلى فاطمة الزهراء وإلى حمزة سيد الشهداء »
+        </div>
+        <div class="english-text translation" style="text-align: center; border-left-color: var(--crimson-bright);">
+          <strong>"O Muhammad! Upon whom the angels of heaven send blessings! Here is Hussain — drenched in blood, his limbs severed, and your daughters taken captive! To Allah is our complaint, and to Muhammad the Chosen, and to Ali the Pleased, and to Fatima al-Zahra, and to Hamza the Master of the Martyrs!"</strong>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="speaker-label">Lady Zainab (AS)</div>
+        <div class="arabic-text speech" style="border-right-color: var(--crimson-bright); background: rgba(220, 20, 60, 0.04); text-align: center; line-height: 2.4;">
+          « يا محمداه، هذا حسين بالعراء تسفي عليه الصبا، قتيل أولاد البغايا. واحزناه، واكرباه، اليوم مات جدي رسول الله صلى الله عليه وآله. يا أصحاب محمداه هؤلاء ذرية المصطفى يساقون سوق السبايا »
+        </div>
+        <div class="english-text translation" style="text-align: center; border-left-color: var(--crimson-bright);">
+          <strong>"O Muhammad! Here is Hussain in the open desert, the east wind blowing dust upon him — slain by the sons of the disgraced! O my grief! O my anguish! Today my grandfather, the Messenger of Allah, has truly died! O companions of Muhammad! These are the progeny of the Chosen One, driven like captives!"</strong>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="arabic-text" style="text-align: center; border-right: none; border-left: none;">
+          فأبكت والله كل عدوٍ وصديق
+        </div>
+        <div class="english-text translation" style="text-align: center; border-left: none;">
+          <em>By Allah, she made every foe and every friend weep.</em>
+        </div>
+      </div>
+
+      <div class="poetry-block" style="border-color: var(--crimson-deep); margin-top: 3rem;">
+        <div class="arabic-line" style="font-size: 1.3rem;">يا صاحب الأمر أدركنا فليس لنا</div>
+        <div class="english-line">"O Master of the Age, reach us — for we have</div>
+        <div class="arabic-line">ورد هني ولا عيش لنا رغد</div>
+        <div class="english-line">No sweet oasis, nor any pleasant life.</div>
+        <div class="arabic-line">فانهض فدتك بقايا أنفس ظفرت</div>
+        <div class="english-line">Rise — may the remnants of our souls be your ransom —</div>
+        <div class="arabic-line">بها النوائب حتى خانها الجلد</div>
+        <div class="english-line">Souls that calamity has seized until patience failed.</div>
+        <div class="arabic-line">طالت علينا ليالي الانتظار فهل</div>
+        <div class="english-line">Long upon us are the nights of waiting — so tell us,</div>
+        <div class="arabic-line">يابن الزكي لليل الانتظار غد</div>
+        <div class="english-line">O son of the Pure, does this night of waiting have a dawn?"</div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======= FOOTER ======= -->
+  <footer class="footer">
+    <div class="footer-dua">إنّا للهِ وإنّا إليهِ راجعون</div>
+    <div class="footer-ornament">
+      <div class="ornament-divider"><span class="line"></span><span class="diamond"></span><span class="line"></span></div>
+    </div>
+    <p class="footer-text">
+      The narrative of the Martyrdom of Imam Hussain (AS) at Karbala — 10th Muharram, 61 AH (680 CE)<br>
+      Recitation by Sheikh Abdul Zahra Al-Ka'bi<br>
+      Source texts from classical Islamic historical works<br><br>
+      <span style="color: var(--gold); opacity: 0.6;">اللهم صل على محمد وآل محمد</span>
+    </p>
+  </footer>
+
+  <!-- ======= AUDIO PLAYER ======= -->
+  <div class="audio-player-wrapper">
+    <div class="audio-player" id="audio-player">
+      <div class="audio-progress-bar" id="audio-progress-bar">
+        <div class="audio-progress-fill" id="audio-progress-fill"></div>
+      </div>
+      <div class="audio-controls">
+        <div class="audio-left">
+          <button class="audio-skip-btn" id="audio-skip-back" aria-label="Backward 10s">↺</button>
+          <button class="audio-play-btn" id="audio-play-btn" aria-label="Play/Pause">▶</button>
+          <button class="audio-skip-btn" id="audio-skip-fwd" aria-label="Forward 10s">↻</button>
+          <div class="audio-info">
+            <div class="audio-title">مقتل الإمام الحسين عليه السلام</div>
+            <div class="audio-time-wrap">
+              <div class="audio-time" id="audio-time">0:00 / 0:00</div>
+              <div class="audio-visualizer" id="audio-visualizer">
+                <span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="audio-right">
+          <div class="audio-vol-wrap">
+            <button class="audio-icon-btn" id="audio-vol-btn" aria-label="Mute/Unmute">🔊</button>
+            <input type="range" class="audio-slider" id="audio-volume" min="0" max="1" step="0.01" value="1">
+          </div>
+          <button class="audio-speed-btn" id="audio-speed-btn">1x</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hidden audio element -->
+  <audio id="audio-element" preload="metadata">
+    <source src="maqtal.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

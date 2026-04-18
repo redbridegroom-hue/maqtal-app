@@ -1,0 +1,17 @@
+{
+  "name": "Maqtal al-Hussain (AS)",
+  "short_name": "Maqtal",
+  "description": "The narrative of the martyrdom of Imam Hussain ibn Ali (peace be upon him) at Karbala.",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#030303",
+  "theme_color": "#8a0303",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
